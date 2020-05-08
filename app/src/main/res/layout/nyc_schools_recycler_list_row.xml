@@ -1,0 +1,33 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="nycSchoolsList"
+            type="com.schools.nyc.model.NYCSchoolsModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        card_view:cardCornerRadius="5dp">
+
+            <TextView
+                android:id="@+id/schoolname"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:text="@{nycSchoolsList.school_name}"
+                android:textStyle="bold" />
+
+
+    </androidx.cardview.widget.CardView>
+</layout>

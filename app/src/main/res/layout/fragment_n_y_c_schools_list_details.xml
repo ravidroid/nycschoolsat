@@ -1,0 +1,110 @@
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="nycSchoolsListDetails"
+            type="com.schools.nyc.model.NYCSchoolsModelDetails" />
+    </data>
+
+
+<RelativeLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/school_name_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:textSize="15sp"
+        android:text="@string/school_name"/>
+    <TextView
+        android:id="@+id/school_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/school_name_lbl"
+        android:layout_marginTop="20dp"
+        android:gravity="right"
+        android:textSize="12sp"
+        android:layout_marginRight="5dp"
+        android:text="@{nycSchoolsListDetails!=null ?nycSchoolsListDetails.school_name : @string/no_data_available }"/>
+
+    <TextView
+        android:id="@+id/avg_score_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/school_name_lbl"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:textSize="15sp"
+        android:text="@string/average_score"/>
+    <TextView
+        android:id="@+id/avg_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/school_name"
+        android:layout_toRightOf="@+id/avg_score_lbl"
+        android:layout_marginTop="20dp"
+        android:textSize="15sp"
+        android:gravity="right"
+        android:layout_marginRight="5dp"
+        android:text="@{nycSchoolsListDetails !=null?nycSchoolsListDetails.sat_critical_reading_avg_score: @string/no_data_available}"/>
+
+    <TextView
+        android:id="@+id/math_avg_score_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/avg_score_lbl"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:text="@string/average_math_score"/>
+
+    <TextView
+        android:id="@+id/math_avg_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/avg_score"
+        android:layout_toRightOf="@+id/math_avg_score_lbl"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:gravity="right"
+        android:textSize="15sp"
+        android:layout_marginRight="5dp"
+        android:text="@{nycSchoolsListDetails !=null ? nycSchoolsListDetails.sat_math_avg_score : @string/no_data_available}"/>
+
+    <TextView
+        android:id="@+id/writing_avg_score_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/math_avg_score_lbl"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:text="@string/average_writing_score"/>
+    <TextView
+        android:id="@+id/writing_avg_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/math_avg_score"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/writing_avg_score_lbl"
+        android:textStyle="bold"
+        android:layout_marginRight="5dp"
+        android:textSize="15sp"
+        android:gravity="right"
+        android:text='@{nycSchoolsListDetails !=null ? nycSchoolsListDetails.sat_writing_avg_score : @string/no_data_available}'/>
+</RelativeLayout>
+</layout>

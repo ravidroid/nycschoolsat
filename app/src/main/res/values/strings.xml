@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">NYCSchools</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="school_name">School Name :</string>
+    <string name="average_score">Average Score :</string>
+    <string name="average_math_score">Average Math Score :</string>
+    <string name="average_writing_score">Average Writing Score :</string>
+    <string name="no_data_available">N/A</string>
+
+</resources>
